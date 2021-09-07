@@ -1,12 +1,8 @@
 import styled, { css } from "styled-components";
 import React, { useEffect, useState } from "react";
-import {
-  getAuth,
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
-  onAuthStateChanged,
-} from "firebase/auth";
+import { getAuth } from "firebase/auth";
 import Form from "./components/Form.js";
+import Main from "./Main";
 
 const App = () => {
   const [currentUser, setCurrentUser] = useState(null);
@@ -17,14 +13,13 @@ const App = () => {
       if (user) {
         setCurrentUser(user);
         console.log(currentUser);
-        // localStorage.setItem("currentUser", user.uid);
+        localStorage.setItem("currentUser", user.uid);
       } else {
         setCurrentUser(null);
-        // localStorage.removeItem("currentUser");
+        localStorage.removeItem("currentUser");
       }
     });
   });
-  const handleSignOut = () => auth.signOut();
 
   const Container = styled.div`
     width: 100%;
@@ -59,9 +54,7 @@ const App = () => {
   return (
     <div>
       {currentUser ? (
-        <div>
-          <button onClick={handleSignOut}>Wyloguj sie</button>
-        </div>
+        <Main />
       ) : (
         <Container>
           <Wrapper primary>
