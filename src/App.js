@@ -2,33 +2,58 @@ import styled, { css } from "styled-components";
 import React, { useEffect, useState } from "react";
 import { getAuth } from "firebase/auth";
 import Form from "./components/Form.js";
+import Logo from "./components/Logo";
 import Main from "./Main";
+import { theme } from "./themes/MainTheme";
 
 const Container = styled.div`
   width: 100%;
   height: 100vh;
-
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+
+  @media (max-width: 768px) {
+  }
 `;
 
-const Wrapper = styled.div`
+const LeftWrapper = styled.section`
   width: 50%;
   height: 100%;
-  padding: 3rem 4rem;
+  display: flex;
+  padding: 0 3em;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  position: relative;
+  background-color: ${theme.darkBlue};
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
+const RightWrapper = styled.section`
+  width: 50%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
   position: relative;
-  background-color: ${(props) => (props.primary ? "#0e1428" : "#F4F4F4")};
+  background-color: #fefefe;
+  @media (max-width: 768px) {
+    width: 100%;
+    background-color: ${theme.darkBlue};
+    color: ${theme.textPrimary};
+  }
 `;
 
 const StyledHeading = styled.h1`
   color: #ffffff;
   font-size: 6em;
+  overflow: hidden;
+  font-weight: 400;
 `;
 const SecondaryHighlight = styled.span`
   color: #e94a3d;
@@ -57,15 +82,16 @@ const App = () => {
         <Main />
       ) : (
         <Container>
-          <Wrapper primary>
+          <LeftWrapper>
+            <Logo></Logo>
             <StyledHeading>
               <SecondaryHighlight>Biggest news </SecondaryHighlight>
               from cryptocurrency world!
             </StyledHeading>
-          </Wrapper>
-          <Wrapper>
+          </LeftWrapper>
+          <RightWrapper>
             <Form />
-          </Wrapper>
+          </RightWrapper>
         </Container>
       )}
     </div>

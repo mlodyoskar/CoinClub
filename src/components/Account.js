@@ -5,6 +5,7 @@ import AvatarImg from "../assets/avatar2.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEllipsisH } from "@fortawesome/free-solid-svg-icons";
 import { getAuth, signOut } from "firebase/auth";
+
 const Wrapper = styled.div`
   position: absolute;
   display: flex;
@@ -59,11 +60,13 @@ const ExpandedOptions = styled.div`
 const OptionList = styled.ul`
   list-style: none;
   padding: 0;
+  margin: 0;
 `;
 const Option = styled.li`
   color: ${theme.textPrimary};
   font-size: 20px;
   cursor: pointer;
+  padding: 0.5em 0;
 `;
 
 const auth = getAuth();
@@ -81,7 +84,6 @@ const Account = () => {
         <ExpandedOptions>
           <OptionList>
             <Option onClick={handleSignOut}>Log Out</Option>
-            <Option></Option>
           </OptionList>
         </ExpandedOptions>
       )}
