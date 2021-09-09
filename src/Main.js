@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
   background-color: ${theme.darkBlue};
-  padding: 4em 6em;
+  padding: 4em 10em;
 `;
 
 const Main = () => {

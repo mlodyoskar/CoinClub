@@ -1,10 +1,10 @@
-import React from "react";
-import styled from "styled-components";
+import React, { useState } from "react";
+import styled, { keyframes } from "styled-components";
 import { theme } from "../themes/MainTheme";
 import AvatarImg from "../assets/avatar2.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEllipsisH } from "@fortawesome/free-solid-svg-icons";
-
+import { getAuth, signOut } from "firebase/auth";
 const Wrapper = styled.div`
   position: absolute;
   display: flex;
@@ -40,18 +40,66 @@ const AppName = styled.span`
   color: ${theme.textSecondary};
 `;
 
+const ExpandedOptionsAnimation = keyframes`
+    0% {opacity: 0; bottom: 11%;}
+    100% {opacity: 1, bottom: 10%;}
+`;
+
+const ExpandedOptions = styled.div`
+  background-color: ${theme.lightBlue};
+  position: absolute;
+  bottom: 10%;
+  width: 15em;
+  border-radius: 10em;
+  display: flex;
+  justify-content: center;
+  animation-name: ${ExpandedOptionsAnimation};
+  animation-duration: 0.2s;
+`;
+const OptionList = styled.ul`
+  list-style: none;
+  padding: 0;
+`;
+const Option = styled.li`
+  color: ${theme.textPrimary};
+  font-size: 20px;
+  cursor: pointer;
+`;
+
+const auth = getAuth();
+
+const handleSignOut = () => {
+  signOut(auth);
+};
+
 const Account = () => {
+  const [active, setActive] = useState(false);
+
   return (
-    <Wrapper>
-      <AvatarWrapper>
-        <Avatar src={AvatarImg}></Avatar>
-      </AvatarWrapper>
-      <NameWrapper>
-        <FullName>Oskar Puchalski</FullName>
-        <AppName>@puchalskioskar</AppName>
-      </NameWrapper>
-      <FontAwesomeIcon icon={faEllipsisH} />
-    </Wrapper>
+    <div>
+      {active && (
+        <ExpandedOptions>
+          <OptionList>
+            <Option onClick={handleSignOut}>Log Out</Option>
+            <Option></Option>
+          </OptionList>
+        </ExpandedOptions>
+      )}
+      <Wrapper
+        onClick={() => {
+          setActive(!active);
+        }}
+      >
+        <AvatarWrapper>
+          <Avatar src={AvatarImg}></Avatar>
+        </AvatarWrapper>
+        <NameWrapper>
+          <FullName>Oskar Puchalski</FullName>
+          <AppName>@puchalskioskar</AppName>
+        </NameWrapper>
+        <FontAwesomeIcon icon={faEllipsisH} />
+      </Wrapper>
+    </div>
   );
 };
 
