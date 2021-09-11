@@ -1,11 +1,11 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 import styled from "styled-components";
-
+import Home from "./Home";
 const Wrapper = styled.section`
   width: 100%;
   display: flex;
-  padding: 0 24em;
+  margin: 0 25em;
 `;
 
 const Feed = () => {
@@ -22,9 +22,6 @@ const Feed = () => {
   );
 };
 
-const Home = () => {
-  return <h1>Home</h1>;
-};
 const Explore = () => {
   return <h1>Explore</h1>;
 };
