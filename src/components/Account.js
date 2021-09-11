@@ -13,7 +13,7 @@ const Wrapper = styled.div`
   justify-content: center;
   color: ${theme.textPrimary};
   font-size: 20px;
-  bottom: 0;
+  bottom: 3em;
   margin-bottom: 3em;
   cursor: pointer;
 `;
@@ -43,13 +43,13 @@ const AppName = styled.span`
 
 const ExpandedOptionsAnimation = keyframes`
     0% {opacity: 0; bottom: 11%;}
-    100% {opacity: 1, bottom: 10%;}
+    100% {opacity: 1, bottom: 1.5em;}
 `;
 
 const ExpandedOptions = styled.div`
   background-color: ${theme.lightBlue};
   position: absolute;
-  bottom: 10%;
+  bottom: 11em;
   width: 15em;
   border-radius: 10em;
   display: flex;

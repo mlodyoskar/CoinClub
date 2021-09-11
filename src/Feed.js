@@ -1,15 +1,24 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
+import styled from "styled-components";
+
+const Wrapper = styled.section`
+  width: 100%;
+  display: flex;
+  padding: 0 24em;
+`;
 
 const Feed = () => {
   return (
-    <Switch>
-      <Route path="/" exact component={Home} />
-      <Route path="/explore" component={Explore} />
-      <Route path="/notification" component={Notification} />
-      <Route path="/profile" component={Profile} />
-      <Route path="/more" component={More} />
-    </Switch>
+    <Wrapper>
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/explore" component={Explore} />
+        <Route path="/notification" component={Notification} />
+        <Route path="/profile" component={Profile} />
+        <Route path="/more" component={More} />
+      </Switch>
+    </Wrapper>
   );
 };
 

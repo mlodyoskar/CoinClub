@@ -27,7 +27,7 @@ const LeftWrapper = styled.section`
   justify-content: space-around;
   flex-direction: column;
   position: relative;
-  background-color: ${theme.darkBlue};
+  background-color: ${theme.primaryDark};
   @media (max-width: 768px) {
     display: none;
   }
@@ -44,7 +44,7 @@ const RightWrapper = styled.section`
   background-color: #fefefe;
   @media (max-width: 768px) {
     width: 100%;
-    background-color: ${theme.darkBlue};
+    background-color: ${theme.primaryDark};
     color: ${theme.textPrimary};
   }
 `;

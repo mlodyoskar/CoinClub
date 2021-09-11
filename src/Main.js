@@ -2,14 +2,16 @@ import styled, { css } from "styled-components";
 import React from "react";
 import Header from "./Header";
 import Feed from "./Feed";
+import Sidebar from "./Sidebar";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { theme } from "./themes/MainTheme";
 
 const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
-  background-color: ${theme.darkBlue};
+  background-color: ${theme.primaryDark};
   padding: 4em 10em;
+  height: 100vh;
 `;
 
 const Main = () => {
@@ -18,7 +20,7 @@ const Main = () => {
       <Wrapper>
         <Header />
         <Feed />
-        {/* <Sidebar /> */}
+        <Sidebar />
       </Wrapper>
     </Router>
   );
