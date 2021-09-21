@@ -43,7 +43,7 @@ const AvatarWrapper = styled.div`
 `;
 const Avatar = styled.img`
   display: flex;
-  max-width: 3.2em;
+  max-width: 2.8em;
   border-radius: 100%;
   align-self: center;
 `;
@@ -73,7 +73,7 @@ const FollowButton = styled.button`
   font-size: 1em;
   background-color: ${theme.lightBlue};
   color: ${theme.textPrimary};
-  padding: 0.6em 2em;
+  padding: 0.6em 1.4em;
   cursor: pointer;
   :hover {
     background-color: ${theme.primary};
@@ -100,7 +100,7 @@ const SidebarFollowAccount = (name, appName) => {
 const SidebarFollow = () => {
   const [people, setPeople] = useState([
     {
-      name: "Kuba Wolski",
+      name: "Natalia Przybylska",
       appName: "wolskikuba",
     },
     {

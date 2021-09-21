@@ -11,9 +11,9 @@ const Wrapper = styled.section`
   position: fixed;
   top: 0;
   right: 0;
-  padding-right: 10em;
+  padding-right: 8em;
   padding-top: 4em;
-  max-width: 24em;
+  max-width: 28em;
 `;
 
 const Sidebar = () => {
@@ -21,7 +21,7 @@ const Sidebar = () => {
     <Wrapper>
       <SidebarFollow></SidebarFollow>
       <SidebarFollow></SidebarFollow>
-      <SidebarFollow></SidebarFollow>
+
     </Wrapper>
   );
 };

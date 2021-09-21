@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
   background-color: ${theme.primaryDark};
-  padding: 4em 10em;
+  padding: 4em 8em;
   height: 100vh;
 `;
 
