@@ -1,10 +1,12 @@
-import styled, { css } from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import React, { useEffect, useState } from "react";
+import { GlobalStyle } from "assets/styles/GlobalStyle";
+
 import { getAuth } from "firebase/auth";
-import Form from "./components/Form.js";
-import Logo from "./components/Logo";
-import Main from "./Main";
-import { theme } from "./themes/MainTheme";
+import Form from "../components/Form.js";
+import Logo from "../components/Logo";
+import Main from "../Main";
+import { theme } from "../assets/styles/theme";
 
 const Container = styled.div`
   width: 100%;
@@ -59,7 +61,7 @@ const SecondaryHighlight = styled.span`
   color: #e94a3d;
 `;
 
-const App = () => {
+const Root = () => {
   const [currentUser, setCurrentUser] = useState(null);
   const auth = getAuth();
 
@@ -77,7 +79,8 @@ const App = () => {
   });
 
   return (
-    <div>
+    <ThemeProvider>
+      <GlobalStyle />
       {currentUser ? (
         <Main />
       ) : (
@@ -94,8 +97,8 @@ const App = () => {
           </RightWrapper>
         </Container>
       )}
-    </div>
+    </ThemeProvider>
   );
 };
 
-export default App;
+export default Root;

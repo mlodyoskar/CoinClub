@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import { theme } from "../themes/MainTheme";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHome,
@@ -20,10 +19,10 @@ const StyledListItem = styled.li`
   padding: 1.2em 0;
 `;
 const StyledLink = styled(Link)`
-  color: ${theme.textPrimary};
+  color: ${({ theme }) => theme.colors.textPrimary};
   text-decoration: none;
   font-size: 1.6em;
-  font-weight: ${theme.normal};
+  font-weight: ${({ theme }) => theme.fontWeight.normal};
 `;
 const Nav = () => {
   return (

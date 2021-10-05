@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styled, { keyframes } from "styled-components";
-import { theme } from "../themes/MainTheme";
 import AvatarImg from "../assets/avatar2.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEllipsisH } from "@fortawesome/free-solid-svg-icons";
@@ -11,7 +10,7 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: ${theme.textPrimary};
+  color: ${({ theme }) => theme.colors.textPrimary};
   font-size: 20px;
   bottom: 3em;
   margin-bottom: 3em;
@@ -38,7 +37,7 @@ const FullName = styled.span`
 const AppName = styled.span`
   display: flex;
   font-size: 0.8em;
-  color: ${theme.textSecondary};
+  color: ${({ theme }) => theme.colros.textSecondary};
 `;
 
 const ExpandedOptionsAnimation = keyframes`
@@ -47,7 +46,7 @@ const ExpandedOptionsAnimation = keyframes`
 `;
 
 const ExpandedOptions = styled.div`
-  background-color: ${theme.lightBlue};
+  background-color: ${({ theme }) => theme.colors.lightBlue};
   position: absolute;
   bottom: 11em;
   width: 15em;

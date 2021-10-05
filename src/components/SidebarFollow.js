@@ -1,15 +1,14 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { theme } from "../themes/MainTheme";
 import AvatarImg from "../assets/avatar2.jpg";
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: ${theme.primaryLight};
-  border: 0.1em solid ${theme.lightBlue};
+  background-color: ${({ theme }) => theme.colors.primaryLight};
+  border: 0.1em solid ${({ theme }) => theme.colors.lightBlue};
   border-radius: 0.5em;
   margin-bottom: 3em;
 `;
@@ -17,7 +16,7 @@ const HeaderContainer = styled.div`
   display: flex;
   justify-content: center;
   align-content: center;
-  border-bottom: 0.1em solid ${theme.lightBlue};
+  border-bottom: 0.1em solid ${({ theme }) => theme.colors.lightBlue};
   padding: 0.5em 0;
 `;
 
@@ -71,7 +70,7 @@ const FollowButton = styled.button`
   border: none;
   border-radius: 2em;
   font-size: 1em;
-  background-color: ${theme.lightBlue};
+  background-color: ${({ theme }) => theme.colors.lightBlue};
   color: ${theme.textPrimary};
   padding: 0.6em 1.4em;
   cursor: pointer;

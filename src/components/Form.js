@@ -7,7 +7,7 @@ import {
   signInWithEmailAndPassword,
   onAuthStateChanged,
 } from "firebase/auth";
-import { theme } from "../themes/MainTheme";
+import { theme } from "assets/styles/theme";
 
 const StyledForm = styled.form`
   width: 100%;
@@ -71,7 +71,7 @@ const StyledSignUpButton = styled.button`
   cursor: pointer;
   font-family: "Rubik";
   @media (max-width: 768px) {
-    background-color: ${theme.secondaryBackground};
+    background-color: ${theme.colors.secondaryBackground};
     color: ${theme.darkBlue};
   }
 `;

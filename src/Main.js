@@ -1,10 +1,10 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import React from "react";
 import Header from "./Header";
 import Feed from "./Feed";
 import Sidebar from "./Sidebar";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import { theme } from "./themes/MainTheme";
+import { theme } from "./assets/styles/theme";
 
 const Wrapper = styled.div`
   display: flex;

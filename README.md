@@ -1,6 +1,6 @@
 ## Overview 🎉
 
-My first React project.
+My first React project. (WORK IN PROGRESS)
 
 Twitter inspired social platform for cryptocurrency enthusiast.
 
