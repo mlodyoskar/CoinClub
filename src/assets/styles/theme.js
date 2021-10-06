@@ -9,7 +9,7 @@ export const theme = {
     lightBlue: "#3E78B2",
     lightBlueBorder: "#3E78B240",
     secondaryBackground: "#FDFDFD",
-    postBorder: "#fdfdfd33",
+    borderColor: "#fdfdfd33",
     primaryRed: "#E94A3D",
   },
   fontWeight: {

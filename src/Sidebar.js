@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { theme } from "./themes/MainTheme";
 import SidebarFollow from "./components/SidebarFollow";
 
 const Wrapper = styled.section`
@@ -21,7 +20,6 @@ const Sidebar = () => {
     <Wrapper>
       <SidebarFollow></SidebarFollow>
       <SidebarFollow></SidebarFollow>
-
     </Wrapper>
   );
 };

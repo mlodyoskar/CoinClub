@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import Nav from "./components/Nav";
 import Account from "./components/Account";
 import LogoImg from "./assets/logo_resized.png";
-import { theme } from "./themes/MainTheme";
 
 const StyledHeader = styled.header`
   position: fixed;

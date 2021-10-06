@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import AvatarImg from "../assets/avatar2.jpg";
+import Button from "components/atoms/Button/Button";
 
 const Container = styled.div`
   display: flex;
@@ -21,9 +22,9 @@ const HeaderContainer = styled.div`
 `;
 
 const Header = styled.h2`
-  color: ${theme.textPrimary};
+  color: ${({ theme }) => theme.colors.textPrimary};
   margin: 0;
-  font-weight: ${theme.regular};
+  font-weight: ${({ theme }) => theme.fontWeight.regular};
   font-size: 1.4em;
   text-align: center;
 `;
@@ -34,7 +35,7 @@ const CellWrapper = styled(Link)`
   text-decoration: none;
   padding: 0.5em 0;
   :hover {
-    background-color: ${theme.primaryHover};
+    background-color: ${({ theme }) => theme.colors.primaryHover};
   }
 `;
 const AvatarWrapper = styled.div`
@@ -53,30 +54,11 @@ const NameWrapper = styled.div`
   padding-left: 0.8em;
 `;
 const FullName = styled.span`
-  color: ${theme.textPrimary};
+  color: ${({ theme }) => theme.colors.textPrimary};
   font-size: 1.1em;
 `;
 const AppName = styled.span`
-  color: ${theme.textSecondary};
-`;
-const ButtonWrapper = styled.div`
-  align-self: center;
-  justify-self: center;
-`;
-const FollowButton = styled.button`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  border-radius: 2em;
-  font-size: 1em;
-  background-color: ${({ theme }) => theme.colors.lightBlue};
-  color: ${theme.textPrimary};
-  padding: 0.6em 1.4em;
-  cursor: pointer;
-  :hover {
-    background-color: ${theme.primary};
-  }
+  color: ${({ theme }) => theme.colors.textSecondary}; ;
 `;
 
 const SidebarFollowAccount = (name, appName) => {
@@ -89,9 +71,7 @@ const SidebarFollowAccount = (name, appName) => {
         <FullName>{name}</FullName>
         <AppName>@{appName}</AppName>
       </NameWrapper>
-      <ButtonWrapper>
-        <FollowButton>Follow</FollowButton>
-      </ButtonWrapper>
+      <Button text="Follow" />
     </CellWrapper>
   );
 };

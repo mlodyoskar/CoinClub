@@ -9,7 +9,7 @@ import { theme } from "./assets/styles/theme";
 const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
-  background-color: ${theme.primaryDark};
+  background-color: ${({ theme }) => theme.colors.primaryDark};
   padding: 4em 8em;
   height: 100vh;
 `;

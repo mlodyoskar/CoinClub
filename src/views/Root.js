@@ -1,7 +1,6 @@
 import styled, { ThemeProvider } from "styled-components";
 import React, { useEffect, useState } from "react";
 import { GlobalStyle } from "assets/styles/GlobalStyle";
-
 import { getAuth } from "firebase/auth";
 import Form from "../components/Form.js";
 import Logo from "../components/Logo";
@@ -29,7 +28,7 @@ const LeftWrapper = styled.section`
   justify-content: space-around;
   flex-direction: column;
   position: relative;
-  background-color: ${theme.primaryDark};
+  background-color: ${({ theme }) => theme.colors.primaryDark};
   @media (max-width: 768px) {
     display: none;
   }
@@ -79,7 +78,7 @@ const Root = () => {
   });
 
   return (
-    <ThemeProvider>
+    <ThemeProvider theme={theme}>
       <GlobalStyle />
       {currentUser ? (
         <Main />

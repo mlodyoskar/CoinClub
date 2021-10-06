@@ -37,7 +37,7 @@ const FullName = styled.span`
 const AppName = styled.span`
   display: flex;
   font-size: 0.8em;
-  color: ${({ theme }) => theme.colros.textSecondary};
+  color: ${({ theme }) => theme.colors.textSecondary};
 `;
 
 const ExpandedOptionsAnimation = keyframes`
@@ -62,7 +62,7 @@ const OptionList = styled.ul`
   margin: 0;
 `;
 const Option = styled.li`
-  color: ${theme.textPrimary};
+  color: ${({ theme }) => theme.colors.textPrimary};
   font-size: 20px;
   cursor: pointer;
   padding: 0.5em 0;
