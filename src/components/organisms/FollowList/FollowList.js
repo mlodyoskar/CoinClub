@@ -2,14 +2,23 @@ import React, { useState } from "react";
 import FollowListItem from "components/moleculs/FollowListItem/FollowListItem";
 import { users as usersData } from "data/users";
 import { Wrapper } from "./FollowList.styles";
+import { Title } from "components/atoms/Title/Title";
 
 const FollowList = () => {
   const [users, setUsers] = useState(usersData);
 
+  console.log(users);
+
+  const followUser = (userName) => {
+    const newUsers = users.filter((user) => user.userName !== userName);
+    setUsers(newUsers);
+  };
+
   return (
     <Wrapper>
-      {users.map(({ name, userName }) => (
-        <FollowListItem name={name} userName={userName} />
+      <Title>People you may know</Title>
+      {users.slice(0, 4).map(({ name, userName }) => (
+        <FollowListItem name={name} userName={userName} followUser={followUser} />
       ))}
     </Wrapper>
   );
