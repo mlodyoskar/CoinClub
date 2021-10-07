@@ -1,6 +1,6 @@
 import React from "react";
 import styled, { css } from "styled-components";
-import logo from "../assets/logo_resized.png";
+import logo from "assets/img/logo_resized.png";
 
 const LogoWrapper = styled.a`
   position: absolute;

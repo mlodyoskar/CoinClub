@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import AvatarImg from "../assets/avatar2.jpg";
-import Button from "components/atoms/Button/Button";
+import { Button } from "components/atoms/Button/Button";
+import { Avatar } from "./atoms/Avatar/Avatar";
 
 const Container = styled.div`
   display: flex;
@@ -38,15 +38,7 @@ const CellWrapper = styled(Link)`
     background-color: ${({ theme }) => theme.colors.primaryHover};
   }
 `;
-const AvatarWrapper = styled.div`
-  justify-self: center;
-`;
-const Avatar = styled.img`
-  display: flex;
-  max-width: 2.8em;
-  border-radius: 100%;
-  align-self: center;
-`;
+
 const NameWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -64,9 +56,7 @@ const AppName = styled.span`
 const SidebarFollowAccount = (name, appName) => {
   return (
     <CellWrapper to="/">
-      <AvatarWrapper>
-        <Avatar src={AvatarImg}></Avatar>
-      </AvatarWrapper>
+      <Avatar />
       <NameWrapper>
         <FullName>{name}</FullName>
         <AppName>@{appName}</AppName>
@@ -97,9 +87,7 @@ const SidebarFollow = () => {
       <HeaderContainer>
         <Header>People you may follow</Header>
       </HeaderContainer>
-      {people.map((person) =>
-        SidebarFollowAccount(person.name, person.appName)
-      )}
+      {people.map((person) => SidebarFollowAccount(person.name, person.appName))}
     </Container>
   );
 };

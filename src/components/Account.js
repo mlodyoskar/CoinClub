@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import styled, { keyframes } from "styled-components";
-import AvatarImg from "../assets/avatar2.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEllipsisH } from "@fortawesome/free-solid-svg-icons";
 import { getAuth, signOut } from "firebase/auth";
+import { Avatar } from "./atoms/Avatar/Avatar";
 
 const Wrapper = styled.div`
   position: absolute;
@@ -16,20 +16,20 @@ const Wrapper = styled.div`
   margin-bottom: 3em;
   cursor: pointer;
 `;
-const AvatarWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
+// const AvatarWrapper = styled.div`
+//   display: flex;
+//   flex-direction: column;
+// `;
 const NameWrapper = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0 1em;
 `;
-const Avatar = styled.img`
-  display: flex;
-  max-width: 2.5em;
-  border-radius: 100%;
-`;
+// const Avatar = styled.img`
+//   display: flex;
+//   max-width: 2.5em;
+//   border-radius: 100%;
+// `;
 const FullName = styled.span`
   display: flex;
   font-size: 0.9em;
@@ -91,9 +91,10 @@ const Account = () => {
           setActive(!active);
         }}
       >
-        <AvatarWrapper>
+        {/* <AvatarWrapper>
           <Avatar src={AvatarImg}></Avatar>
-        </AvatarWrapper>
+        </AvatarWrapper> */}
+        <Avatar />
         <NameWrapper>
           <FullName>Oskar Puchalski</FullName>
           <AppName>@puchalskioskar</AppName>

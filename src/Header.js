@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Nav from "./components/Nav";
 import Account from "./components/Account";
-import LogoImg from "./assets/logo_resized.png";
+import LogoImg from "assets/img/logo_resized.png";
 
 const StyledHeader = styled.header`
   position: fixed;

@@ -1,10 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-
-import AvatarImg from "./assets/avatar2.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faImage, faPaperclip } from "@fortawesome/free-solid-svg-icons";
-import Button from "components/atoms/Button/Button";
+import { Button } from "components/atoms/Button/Button";
 
 const Wrapper = styled.section`
   width: 100%;
@@ -78,9 +76,7 @@ const Home = () => {
   return (
     <Wrapper>
       <TweetWrapper>
-        <AvatarWrapper>
-          <Avatar src={AvatarImg}></Avatar>
-        </AvatarWrapper>
+        <Avatar />
         <InputWrapper>
           <Input placeholder="What's happening?"></Input>
         </InputWrapper>
