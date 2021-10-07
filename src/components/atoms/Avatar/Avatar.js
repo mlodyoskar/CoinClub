@@ -15,8 +15,8 @@ const Wrapper = styled.div`
   }
 `;
 
-export const Avatar = () => (
+export const Avatar = ({ imgSrc }) => (
   <Wrapper>
-    <img src={AvatarImg} alt="User Avatar" />
+    <img src={imgSrc || AvatarImg} alt="User Avatar" />
   </Wrapper>
 );

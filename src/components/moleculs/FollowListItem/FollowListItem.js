@@ -33,14 +33,20 @@ const Name = styled.div`
   }
 `;
 
-const FollowListItem = ({ name, userName, followUser }) => (
+const FollowListItem = ({ name, userName, followUser, imgSrc }) => (
   <Wrapper>
-    <Avatar />
+    <Avatar imgSrc={imgSrc} />
     <Name>
       <p>{name}</p>
       <p>{userName}</p>
     </Name>
-    <Button onClick={() => followUser(userName)}>Follow</Button>
+    <Button
+      onClick={() => {
+        followUser(userName);
+      }}
+    >
+      Follow
+    </Button>
   </Wrapper>
 );
 

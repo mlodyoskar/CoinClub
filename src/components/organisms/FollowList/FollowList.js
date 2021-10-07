@@ -17,8 +17,8 @@ const FollowList = () => {
   return (
     <Wrapper>
       <Title>People you may know</Title>
-      {users.slice(0, 4).map(({ name, userName }) => (
-        <FollowListItem name={name} userName={userName} followUser={followUser} />
+      {users.slice(0, 4).map(({ name, userName, imgSrc }) => (
+        <FollowListItem name={name} userName={userName} imgSrc={imgSrc} followUser={followUser} />
       ))}
     </Wrapper>
   );
