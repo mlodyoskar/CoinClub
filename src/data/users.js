@@ -2,6 +2,7 @@ export const users = [
   {
     name: "Oskar Puchalski",
     userName: "@puchalskioskar",
+    imgSrc: "images/avatars/avatar.jpg",
   },
   {
     name: "Jakub Bryska",
@@ -14,10 +15,22 @@ export const users = [
   {
     name: "Basia Jurek",
     userName: "@basia.jurek",
-    imgSrc: "leosia.jpeg",
+    imgSrc: "images/avatars/leosia.jpeg",
   },
   {
     name: "Agnieszka Gramse",
     userName: "@agagramse",
+  },
+  {
+    name: "Jan Karski",
+    userName: "@kaczoreek",
+  },
+  {
+    name: "Oliwier Gaweł",
+    userName: "@wind4fun2",
+  },
+  {
+    name: "Jakub Jeliński",
+    userName: "@jelina",
   },
 ];

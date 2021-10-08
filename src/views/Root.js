@@ -5,6 +5,7 @@ import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "assets/styles/GlobalStyle";
 import { theme } from "assets/styles/theme";
 import FollowList from "components/organisms/FollowList/FollowList";
+import CryptoList from "components/organisms/CryptoList/CryptoList";
 
 import styled from "styled-components";
 const Wrapper = styled.div`
@@ -20,6 +21,7 @@ const Root = () => (
       <GlobalStyle />
       <Wrapper>
         <FollowList />
+        <CryptoList />
       </Wrapper>
     </ThemeProvider>
   </Router>

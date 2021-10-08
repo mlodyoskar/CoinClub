@@ -12,11 +12,12 @@ const FollowList = () => {
   const followUser = (userName) => {
     const newUsers = users.filter((user) => user.userName !== userName);
     setUsers(newUsers);
+    console.log(users);
   };
 
   return (
     <Wrapper>
-      <Title>People you may know</Title>
+      <Title text="People you may know" />
       {users.slice(0, 4).map(({ name, userName, imgSrc }) => (
         <FollowListItem name={name} userName={userName} imgSrc={imgSrc} followUser={followUser} />
       ))}
