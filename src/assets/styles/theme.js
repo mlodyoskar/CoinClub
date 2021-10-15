@@ -13,6 +13,7 @@ export const theme = {
     secondaryBackground: "#FDFDFD",
     borderColor: "#fdfdfd33",
     primaryRed: "#E94A3D",
+    gold: "#FFD700",
   },
   fontWeight: {
     light: 300,
