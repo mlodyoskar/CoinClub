@@ -9,11 +9,11 @@ const Wrapper = styled.div`
   align-items: center;
 
   & img {
-    max-width: 100%;
-    max-height: 100%;
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
+    max-width: 50px;
+    max-height: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
   }
 `;
 

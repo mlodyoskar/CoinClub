@@ -1,13 +1,12 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { ThemeProvider } from "styled-components";
-
+import styled, { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "assets/styles/GlobalStyle";
 import { theme } from "assets/styles/theme";
 import FollowList from "components/organisms/FollowList/FollowList";
 import CryptoList from "components/organisms/CryptoList/CryptoList";
+import Posts from "components/Posts";
 
-import styled from "styled-components";
 const Wrapper = styled.div`
   display: flex;
   height: 100vh;
@@ -20,8 +19,8 @@ const Root = () => (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Wrapper>
-        <FollowList />
-        <CryptoList />
+        <Posts />
+
       </Wrapper>
     </ThemeProvider>
   </Router>
